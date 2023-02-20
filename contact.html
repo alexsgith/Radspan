@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Radspan Wireless System Pvt. Ltd.</title>
+        <link rel="stylesheet" href="cont.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav> 
+                <a href="index.html"><img src="images/Logo.png"></a>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()" ></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="">ABOUT US</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <form method="post" action="mail.php" >
+                    <h3>GET IN TOUCH</h3>
+                    <input type="text" name="name" placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your mail id" required>
+                    <input type="text" name="phone" placeholder="phone number" required>
+                    <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
+                    <button type="submit" name="submit"> send</button>
+                </form>
+            </div>
+            
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js"> </script>
+        <script>
+        function sendEmail()
+        {
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "spycripzz@gmail.com",
+                Password : "skoakyphlgckhkaa",
+                To : 'alex.savi.kv@rgmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New enquiry",
+                Body : "And this is the body"
+            }).then(
+              message => alert("message send")
+            );
+        }
+    </script>
+    <!------------------Java to open close menu-------------------------->
+    <script>
+        var navLink = document.getElementById("navLinks");
+        function showMenu(){
+            navLink.style.right="0";
+        }
+        function hideMenu(){
+            navLink.style.right="-200px";
+        }
+    </script>
+
+    </body>
+</html>
