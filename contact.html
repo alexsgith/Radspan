@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Radspan Wireless System Pvt. Ltd.</title>
-        <link rel="stylesheet" href="cont.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
@@ -18,25 +18,25 @@
                     <i class="fa fa-times" onclick="hideMenu()" ></i>
                     <ul>
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="">ABOUT US</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="">CONTACT</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="container">
                 <form method="post" action="mail.php" >
                     <h3>GET IN TOUCH</h3>
-                    <input type="text" name="name" placeholder="your name" required>
-                    <input type="email" name="email" placeholder="your mail id" required>
-                    <input type="text" name="phone" placeholder="phone number" required>
+                    <input type="text" name="name" placeholder="your name" required />
+                    <input type="email" name="email" placeholder="your mail id" required />
+                    <input type="text" name="phone" placeholder="phone number" required />
                     <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
                     <button type="submit" name="submit"> send</button>
                 </form>
             </div>
             
         </section>
-        <script src="https://smtpjs.com/v3/smtp.js"> </script>
-        <script>
+        <!-- <script src="https://smtpjs.com/v3/smtp.js"> </script> -->
+        <!-- <script>
         function sendEmail()
         {
             Email.send({
@@ -50,8 +50,8 @@
             }).then(
               message => alert("message send")
             );
-        }
-    </script>
+        } 
+        </script> -->
     <!------------------Java to open close menu-------------------------->
     <script>
         var navLink = document.getElementById("navLinks");
